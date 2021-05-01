@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Diagonal card</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+      }
+      .title {
+        position: fixed;
+        top: 30%;
+        left: 8vw;
+        font-size: 5vw;
+        z-index: 1;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: hidden;
+      }
+      .diagonal {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 600px;
+        /*transform: rotateZ(35deg) rotateX(50deg);*/
+        transform-origin: center left;
+        transform: perspective(1000px) rotateX(35deg) rotateY(-5deg) rotateZ(25deg);
+      }
+      .card {
+        color: #333;
+        flex-basis: 160px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: 160px;
+        height: 120px;
+        margin: 8px;
+        padding: 5px 15px;
+        box-sizing: border-box;
+        /* Glassmorphism */
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.2);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: #666 1px 1px 3px;
+        transition-duration: 0.5s;
+        cursor: pointer;
+      }
+      .card:nth-child(4) {
+        margin-left: 80px;
+      }
+      .card:hover {
+        background: rgba(255,255,255,0.4);
+        transform: translate3d(-6px, -6px, 0px);
+        box-shadow: rgb(0 0 0 / 40%) 6px 6px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Diagonal Card</h1>
+    <div class="container">
+      <div class="diagonal">
+        <article class="card">
+          <h1>sample</h1>
+        </article>
+        <article class="card">
+          <h1>sample</h1>
+        </article>
+        <article class="card">
+          <h1>sample</h1>
+        </article>
+        <article class="card">
+          <h1>sample</h1>
+        </article>
+        <article class="card">
+          <h1>sample</h1>
+        </article>
+        <article class="card">
+          <h1>sample</h1>
+        </article>
+        <article class="card">
+          <h1>sample</h1>
+        </article>
+        <article class="card">
+          <h1>sample</h1>
+        </article>
+        <article class="card">
+          <h1>sample</h1>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
